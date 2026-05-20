@@ -6,8 +6,8 @@
     <title>Jadoo Travel</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-slate-500 min-h-screen font-sans">
-    <section
+  <body class="bg-white min-h-screen font-sans">
+    <div
       class="bg-white max-w-6xl min-h-screen mx-auto px-4 sm:px-10 md:px-16 lg:px-20 relative pb-10 z-10 overflow-x-clip space-y-10"
     >
       <img
@@ -17,51 +17,53 @@
       />
 
       <nav
-        class="flex justify-between text-blue-500 py-4 items-center sticky top-0 bg-white/80 backdrop-blur-md z-50 w-full"
+        class="flex justify-between text-blue-500 py-4 items-center sticky top-0 z-50 w-full"
       >
         <div class="shrink-0">
           <img src="./Logo.png" alt="Logo" class="h-8 sm:h-10 object-contain" />
         </div>
-        <div
-          class="hidden md:flex gap-4 lg:gap-8 text-black items-center text-sm lg:text-base"
-        >
-          <a href="" class="hover:text-blue-500 transition">Destinations</a>
-          <a href="" class="hover:text-blue-500 transition">Hotels</a>
-          <a href="" class="hover:text-blue-500 transition">Flights</a>
-          <a href="" class="hover:text-blue-500 transition">Bookings</a>
-          <a href="" class="hover:text-blue-500 transition">Login</a>
-          <button
-            class="border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition"
-          >
-            Sign up
-          </button>
-          <select class="bg-transparent focus:outline-none">
-            <option>EN</option>
+        <div class="hidden lg:flex items-center  md:gap-x-3 lg:gap-x-8 text-slate-700 font-medium medium:text-xs lg:text-base">
+          <a href="" class="leading-none">Destinations</a>
+          <a href="" class="leading-none">Hotels</a>
+          <a href="" class="leading-none">Flights</a>
+          <a href="" class="leading-none">Bookings</a>
+          <a href="Welcome.html" class="leading-none">Login</a>
+          <button class="inline-flex items-center justify-center border border-slate-700 rounded-md md:px-2.5 md:py-1 lg:px-4 lg:py-1.5 md:text-xs lg:text-sm  font-medium leading-none hover:bg-slate-900 hover:text-white hover:border-transparent transition duration-300 h-10"> <a href="registerForm.html">Sign up</a></button>
+          <div class="inline-flex items-center h-10">
+            <select class="bg-transparent text-sm  font-medium h-10 outline-none">
+            <option value="EN">EN</option>
           </select>
-        </div>
+          </div>
+          </div>
 
-        <div class="md:hidden flex items-center gap-2">
-          <select class="bg-transparent text-black text-sm mr-2">
-            <option>EN</option>
-          </select>
-          <button class="text-black p-2 focus:outline-none">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
+           <button id="menuBtn" class="lg:hidden text-slate-700 bg-transparent text-3xl p-2 hover:bg-gray-200 rounded-md transition duration-300 flex items-center justify-center">
+            <span id="icon" class="">☰</span>
           </button>
-        </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobileMenu"
+       class="hidden absolute top-full left-0 w-full bg-yellow-500 shadow-lg flex-col gap-4 p-5 lg:hidden text-slate-700 font-medium z-40 border-t border-gray-200">
+
+    <a href="#" class="hover:text-slate-900 transition duration-200">Destinations</a>
+    <a href="#" class="hover:text-slate-900 transition duration-200">Hotels</a>
+    <a href="#" class="hover:text-slate-900 transition duration-200">Flights</a>
+    <a href="#" class="hover:text-slate-900 transition duration-200">Bookings</a>
+    <a href="#" class="hover:text-slate-900 transition duration-200">Login</a>
+
+    <button class="border border-slate-700 rounded-md px-4 py-2 w-fit hover:bg-slate-700 hover:text-white transition duration-300">
+      Sign up
+    </button>
+
+    <select class="bg-transparent outline-none w-fit border-b border-slate-300 pb-1">
+      <option>EN</option>
+    </select>
+  </div>
+
+
+        
+        <!-- <img src="images/Decore.png" alt="Decore" class="absolute top-0 rigt-0 "> -->
       </nav>
+
 
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10 mt-12 md:mt-20"
@@ -74,26 +76,23 @@
           >
             Best Destinations Around the World
           </p>
-          <h1
-            class="font-bold text-4xl sm:text-5xl lg:text-6xl text-[#181E4B] leading-tight"
-          >
-            Travel, enjoy<br />
-            and live a new<br />
-            and full life
-          </h1>
+          <h1 class="font-bold text-4xl sm:text-5xl md:text-4xl lg:text-6xl text-[#181E4B] leading-tight">Travel, enjoy</h1>
+            <h1 class="font-bold text-4xl sm:text-5xl  md:text-4xl lg:text-6xl text-[#181E4B] leading-tight">and live a new</h1>
+            <h1 class="font-bold text-4xl sm:text-5xl  md:text-4xl lg:text-6xl text-[#181E4B] leading-tight">and full life </h1>
           <p class="text-gray-500 text-sm sm:text-base max-w-md">
             Built Wicket longer admire do barton vanity itself do in it.
             Preferred to sportsmen it engrossed listening. Park gate sell they
             west hard for the.
           </p>
 
-          <div class="flex items-center gap-4 sm:gap-6 mt-2">
+          <!-- <div class="flex items-center gap-4 sm:gap-6 mt-2 sm:grid-col-1">
             <button
               class="bg-[#F1A501] hover:scale-105 transition-all text-white rounded-xl px-5 py-3 sm:px-6 text-sm sm:text-base font-medium shadow-md shadow-orange-200"
             >
               Find out more
             </button>
-            <button class="flex items-center gap-2 sm:gap-3 group">
+            <div>
+              <button class="flex items-center gap-2 sm:gap-3 group">
               <img
                 src="./Play button.png"
                 alt="Play"
@@ -103,7 +102,27 @@
                 >Play Demo</span
               >
             </button>
+            </div>
+            
+          </div> -->
+          <div class="flex flex-col sm:flex-col md:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+            <button
+              class="text-white font-medium border bg-yellow-400 rounded-md py-3 px-6 hover:bg-yellow-600 transition duration-500 ease-in-out w-full sm:w-auto max-w-xs"
+            >
+              Find out more
+            </button>
+            <button class="flex items-center justify-center space-x-3 sm:space-x-3 md:space-x-2 lg:space-x-4 bg-white border border-none rounded-md py-3 px-5 w-full sm:w-auto max-w-xs shadow-sm hover:shadow-md transition duration-300">
+              <div
+                class="bg-red-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition duration-500 ease-in-out"
+              >
+                <div
+                  class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent"
+                ></div>
+              </div>
+              <span class="text-gray-500 font-medium">Play Demo</span>
+            </button>
           </div>
+        
         </div>
 
         <div class="w-full relative flex justify-center md:justify-end">
@@ -203,290 +222,210 @@
         </div>
 
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-center items-center w-full max-w-5xl mx-auto"
-        >
-          <!-- Card 1 -->
-          <div
-            class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md mx-auto w-full max-w-xs sm:max-w-none"
-          >
-            <div class="h-64 sm:h-72 lg:h-80 w-full">
-              <img
-                src="./Rectangle 14.png"
-                alt="Rome"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-5 space-y-3">
-              <div
-                class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
-              >
-                <span>Rome, Italy</span>
-                <span>$5.42k</span>
-              </div>
-              <div
-                class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
-              >
-                <img
-                  src="./navigation 1.png"
-                  alt="navigation"
-                  class="w-4 h-4"
-                />
-                <p>10 Days Trip</p>
-              </div>
-            </div>
-          </div>
+  class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto place-items-center w-full"
+>
+  <!-- Card 1 -->
+  <div
+    class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md w-full max-w-xs"
+  >
+    <div class="h-64 sm:h-72 lg:h-80 w-full">
+      <img
+        src="./Rectangle 14.png"
+        alt="Rome"
+        class="w-full h-full object-cover object-top"
+      />
+    </div>
 
-          <!-- Card 2 -->
-          <div
-            class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md mx-auto w-full max-w-xs sm:max-w-none"
-          >
-            <div class="h-64 sm:h-72 lg:h-80 w-full">
-              <img
-                src="./london.png"
-                alt="London"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-5 space-y-3">
-              <div
-                class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
-              >
-                <span>London, UK</span>
-                <span>$4.2K</span>
-              </div>
-              <div
-                class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
-              >
-                <img
-                  src="./navigation 1.png"
-                  alt="navigation"
-                  class="w-4 h-4"
-                />
-                <p>12 Days Trip</p>
-              </div>
-            </div>
-          </div>
+    <div class="p-5 space-y-3">
+      <div
+        class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
+      >
+        <span>Rome, Italy</span>
+        <span>$5.42k</span>
+      </div>
 
-          <div
-            class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md mx-auto w-full max-w-xs sm:col-span-2 lg:col-span-1 sm:max-w-xs lg:max-w-none"
-          >
-            <div class="h-64 sm:h-72 lg:h-80 w-full">
-              <img
-                src="./europe.png"
-                alt="Europe"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-5 space-y-3">
-              <div
-                class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
-              >
-                <span>Full Europe</span>
-                <span>$15K</span>
-              </div>
-              <div
-                class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
-              >
-                <img
-                  src="./navigation 1.png"
-                  alt="navigation"
-                  class="w-4 h-4"
-                />
-                <p>28 Days Trip</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div
+        class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
+      >
+        <img
+          src="./navigation 1.png"
+          alt="navigation"
+          class="w-4 h-4"
+        />
+        <p>10 Days Trip</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md w-full max-w-xs"
+  >
+    <div class="h-64 sm:h-72 lg:h-80 w-full">
+      <img
+        src="./london.png"
+        alt="London"
+        class="w-full h-full object-cover object-top"
+      />
+    </div>
+
+    <div class="p-5 space-y-3">
+      <div
+        class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
+      >
+        <span>London, UK</span>
+        <span>$4.2K</span>
+      </div>
+
+      <div
+        class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
+      >
+        <img
+          src="./navigation 1.png"
+          alt="navigation"
+          class="w-4 h-4"
+        />
+        <p>12 Days Trip</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    class="bg-white rounded-3xl hover:scale-105 hover:shadow-xl transition-all duration-300 overflow-hidden shadow-md w-full max-w-xs"
+  >
+    <div class="h-64 sm:h-72 lg:h-80 w-full">
+      <img
+        src="./europe.png"
+        alt="Europe"
+        class="w-full h-full object-cover object-top"
+      />
+    </div>
+
+    <div class="p-5 space-y-3">
+      <div
+        class="flex justify-between text-slate-700 text-base sm:text-lg font-bold"
+      >
+        <span>Full Europe</span>
+        <span>$15K</span>
+      </div>
+
+      <div
+        class="flex space-x-3 text-slate-500 text-sm font-medium items-center"
+      >
+        <img
+          src="./navigation 1.png"
+          alt="navigation"
+          class="w-4 h-4"
+        />
+        <p>28 Days Trip</p>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
 
       <!-- BOOKING STEPS SECTION -->
-      <div
-        class="w-full flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16"
+      <!-- <div class="flex flex-row md:flex-col justify-between items-center gap-10 md:gap-6 lg:gap-16">
+   -->
+        <div
+        class="w-full flex flex-col md:flex-col justify-between items-center gap-10 md:gap-6 lg:gap-16 lg:flex-row"
       >
-        <div class="w-full md:w-[50%] space-y-6 text-center md:text-left">
-          <div class="space-y-2">
-            <span class="text-slate-500 font-bold tracking-wide text-sm block"
-              >Easy and Fast</span
-            >
-            <h2
-              class="text-[#14183E] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
-            >
-              Book Your Next Trip In 3 Easy Steps
-            </h2>
+  <div class="w-full md:w-full space-y-6 text-center md:text-left">
+    <div class="space-y-2">
+      <span class="text-slate-500 font-bold tracking-wide text-sm block">Easy and Fast</span>
+      <h2 class="text-[#14183E] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        Book Your Next Trip </h2>
+        <h2 class="text-[#14183E] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight" >In 3 Easy Steps</h2>
+      
+    </div>
+    
+    <div class="flex flex-col space-y-5 text-left w-full max-w-md mx-auto md:mx-0 md:max-w-full">
+      <div class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:items-start sm:text-left sm:space-y-0 sm:space-x-4">
+        <img src="./ye.png" alt="icon" class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0" />
+        <div class="flex flex-col space-y-0.5">
+          <h3 class="text-slate-700 font-bold text-base">Choose Destination</h3>
+          <p class="text-xs sm:text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:items-start sm:text-left sm:space-y-0 sm:space-x-4">
+        <img src="./red.png" alt="icon" class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0" />
+        <div class="flex flex-col space-y-0.5">
+          <h3 class="text-slate-700 font-bold text-base">Make Payment</h3>
+          <p class="text-xs sm:text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:items-start sm:text-left sm:space-y-0 sm:space-x-4">
+        <img src="./blue.png" alt="icon" class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0" />
+        <div class="flex flex-col space-y-0.5">
+          <h3 class="text-slate-700 font-bold text-base">Reach Airport on Selected Date</h3>
+          <p class="text-xs sm:text-sm text-slate-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full md:w-full flex justify-center md:justify-items-start lg:justify-end relative pr-0 md:pr-6 lg:pr-16 pt-6 pb-12 md:pb-0">
+    <div class="bg-white rounded-[26px] shadow-2xl p-4 sm:p-5 max-w-[340px] sm:max-w-[370px] w-full border border-slate-100/50 relative z-10 transition duration-300 hover:scale-[1.02]">
+      <div class="rounded-[24px] overflow-hidden w-full h-[140px] sm:h-[160px] bg-slate-200">
+        <img src="./girl.jpg" alt="Greece" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="pt-4 space-y-3">
+        <h3 class="text-slate-900 font-bold text-lg tracking-wide">Trip To Greece</h3>
+        <div class="flex items-center text-gray-400 font-medium text-xs sm:text-sm space-x-2">
+          <span>14-29 June</span>
+          <span class="text-gray-300">|</span>
+          <span>by Robbin joseph</span>
+        </div>
+
+        <div class="flex items-center gap-3 pt-1">
+          <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer">
+            <img src="./LEAF.png" alt="leaf" class="w-4 h-4 object-contain" />
           </div>
-          <div
-            class="flex flex-col space-y-5 text-left max-w-md mx-auto md:mx-0"
-          >
-            <!-- Step 1 -->
-            <div class="flex space-x-4 items-start">
-              <img
-                src="./ye.png"
-                alt="icon"
-                class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0"
-              />
-              <div class="flex flex-col space-y-0.5">
-                <h3 class="text-slate-700 font-bold text-base">
-                  Choose Destination
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-            </div>
-            <!-- Step 2 -->
-            <div class="flex space-x-4 items-start">
-              <img
-                src="./red.png"
-                alt="icon"git
-                class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0"
-              />
-              <div class="flex flex-col space-y-0.5">
-                <h3 class="text-slate-700 font-bold text-base">Make Payment</h3>
-                <p class="text-xs sm:text-sm text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-            </div>
-            <!-- Step 3 -->
-            <div class="flex space-x-4 items-start">
-              <img
-                src="./blue.png"
-                alt="icon"
-                class="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0"
-              />
-              <div class="flex flex-col space-y-0.5">
-                <h3 class="text-slate-700 font-bold text-base">
-                  Reach Airport on Selected Date
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-500">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
-            </div>
+          <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer">
+            <img src="./map icon.png" alt="map" class="w-4 h-4 object-contain" />
+          </div>
+          <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer">
+            <img src="./send.png" alt="plane" class="w-4 h-4 object-contain" />
           </div>
         </div>
 
-        <div
-          class="w-full md:w-[50%] flex justify-center md:justify-end relative pr-0 lg:pr-16 pt-6 pb-12 md:pb-0"
-        >
-          <div
-            class="bg-white rounded-[26px] shadow-2xl p-4 sm:p-5 max-w-[340px] sm:max-w-[370px] w-full border border-slate-100/50 relative z-10 transition duration-300 hover:scale-[1.02]"
-          >
-            <div
-              class="rounded-[24px] overflow-hidden w-full h-[140px] sm:h-[160px] bg-slate-200"
-            >
-              <img
-                src="./girl.jpg"
-                alt="Greece"
-                class="w-full h-full object-cover"
-              />
+        <div class="flex justify-between items-center pt-3 border-t border-slate-100/60 text-gray-500 text-xs sm:text-sm">
+          <div class="flex items-center space-x-2">
+            <img src="./building 1.png" alt="building" class="w-4 h-4 object-contain" />
+            <span class="font-medium">24 people going</span>
+          </div>
+          <button class="transition">
+            <img src="./heart.png" alt="heart" class="w-4 h-4 object-contain" />
+          </button>
+        </div>
+      </div>
+      <div class="absolute bottom-6 -right-6 sm:-right-10 md:-right-4 lg:-right-16 bg-white rounded-2xl shadow-xl p-3 flex items-start space-x-3 max-w-[200px] sm:max-w-[230px] w-full border border-slate-50 z-20">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-amber-100 shrink-0">
+          <img src="./building.png" alt="avatar" class="w-full h-full object-cover" />
+        </div>
+        <div class="space-y-1.5 w-full">
+          <span class="text-gray-400 text-[10px] sm:text-xs font-semibold block">Ongoing</span>
+          <h5 class="text-slate-800 font-bold text-xs sm:text-sm">Trip to Rome</h5>
+          <div>
+            <div class="flex text-[10px] font-bold mb-1">
+              <span class="text-purple-600 mr-1">40%</span>
+              <span class="font-medium text-gray-500">completed</span>
             </div>
-
-            <div class="pt-4 space-y-3">
-              <h3 class="text-slate-900 font-bold text-lg tracking-wide">
-                Trip To Greece
-              </h3>
-              <div
-                class="flex items-center text-gray-400 font-medium text-xs sm:text-sm space-x-2"
-              >
-                <span>14-29 June</span>
-                <span class="text-gray-300">|</span>
-                <span>by Robbin joseph</span>
-              </div>
-
-              <div class="flex items-center gap-3 pt-1">
-                <div
-                  class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer"
-                >
-                  <img
-                    src="./LEAF.png"
-                    alt="leaf"
-                    class="w-4 h-4 object-contain"
-                  />
-                </div>
-                <div
-                  class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer"
-                >
-                  <img
-                    src="./map icon.png"
-                    alt="map"
-                    class="w-4 h-4 object-contain"
-                  />
-                </div>
-                <div
-                  class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center cursor-pointer"
-                >
-                  <img
-                    src="./send.png"
-                    alt="plane"
-                    class="w-4 h-4 object-contain"
-                  />
-                </div>
-              </div>
-
-              <div
-                class="flex justify-between items-center pt-3 border-t border-slate-100/60 text-gray-500 text-xs sm:text-sm"
-              >
-                <div class="flex items-center space-x-2">
-                  <img
-                    src="./building 1.png"
-                    alt="building"
-                    class="w-4 h-4 object-contain"
-                  />
-                  <span class="font-medium">24 people going</span>
-                </div>
-                <button class="transition">
-                  <img
-                    src="./heart.png"
-                    alt="heart"
-                    class="w-4 h-4 object-contain"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <!-- Mini Absolute Floating Card -->
-            <div
-              class="absolute bottom-6 -right-6 sm:-right-10 md:-right-12 lg:-right-16 bg-white rounded-2xl shadow-xl p-3 flex items-start space-x-3 max-w-[200px] sm:max-w-[230px] w-full border border-slate-50 z-20"
-            >
-              <div
-                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-amber-100 shrink-0"
-              >
-                <img
-                  src="./building.png"
-                  alt="avatar"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="space-y-1.5 w-full">
-                <span
-                  class="text-gray-400 text-[10px] sm:text-xs font-semibold block"
-                  >Ongoing</span
-                >
-                <h5 class="text-slate-800 font-bold text-xs sm:text-sm">
-                  Trip to Rome
-                </h5>
-                <div>
-                  <div class="flex text-[10px] font-bold mb-1">
-                    <span class="text-purple-600 mr-1">40%</span>
-                    <span class="font-medium text-gray-500">completed</span>
-                  </div>
-                  <div
-                    class="w-full h-[4px] bg-slate-100 rounded-full overflow-hidden"
-                  >
-                    <div
-                      class="bg-purple-600 h-full w-[40%] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-              </div>
+            <div class="w-full h-[4px] bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-purple-600 h-full w-[40%] rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  
+</div>
       <!-- TESTIMONIALS SECTION -->
       <div
-        class="w-full flex flex-col md:flex-row gap-10 md:gap-16 pt-10 pb-20"
+        class="w-full flex flex-col md:flex-col gap-10 md:gap-16 pt-10 pb-20 lg:flex-row md:w-full"
       >
         <div
           class="w-full md:w-[45%] space-y-4 md:space-y-6 text-center md:text-left"
@@ -506,28 +445,8 @@
         </div>
 
         <div
-          class="w-full md:w-[50%] flex justify-center md:justify-end relative pr-0 md:pr-16 h-[250px]"
+          class="w-full md:w-[50%] flex justify-center md:justify-end relative pr-0 md:pr-16 h-[250px] space-x-2"
         >
-          <!-- Background Card -->
-          <div
-            class="bg-gray-100 rounded-[26px] shadow-md p-5 max-w-[400px] w-full border border-slate-100 absolute right-4 z-0 h-[200px] flex flex-col justify-end hover:scale-105 hover:shadow-2xl translate-y-40"
-          >
-            <h3 class="text-slate-900 font-bold text-lg tracking-wide pt-100">
-              Chris Thomas
-            </h3>
-            <div class="text-gray-500 font-medium text-sm">
-              CEO of Red button
-            </div>
-          </div>
-
-          <!-- Foreground Card (Mike Taylor) -->
-          <!-- <div class="rounded-[20px] shadow-2xl w-full max-w-[400px] h-[180px] bg-white p-6 absolute top-0 right-12 z-10 border border-gray-100  hover:scale-105 hover:shadow-2xl">
-            <p class="text-gray-500 text-sm mb-4">"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or delivered no."</p>
-            <div class="flex flex-col">
-              <span class="font-bold text-base text-slate-800">Mike taylor</span>
-              <span class="text-xs text-gray-400">Lahore, Pakistan</span>
-            </div>
-          </div> -->
           <div
             class="rounded-[20px] shadow-2xl w-full max-w-[400px] min-h-[180px] bg-white p-8 relative z-10 border border-gray-50/50 transition-all hover:scale-105"
           >
@@ -552,30 +471,36 @@
             </div>
           </div>
         </div>
+        <div class="-ml-20">
+          <img
+                src="./Pagination.png"
+                alt="Mike Taylor" class="flex items-center pt-20"/>
+        </div>
       </div>
 
       <!-- LOGOS BRANDS SECTION -->
       <div class="w-full py-6">
         <div
-          class="grid grid-cols-3 sm:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition duration-500"
+          class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center hover:grayscale-0 transition duration-500"
         >
-          <div class="flex justify-center">
+          <div class="flex justify-center w-full">
             <img src="./27.png" alt="image10" class="object-contain mx-auto" />
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center w-full">
             <img src="./28.png" alt="image10" class="object-contain mx-auto" />
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center w-full">
             <img src="./29.png" alt="image10" class="object-contain mx-auto" />
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center w-full">
             <img src="./30.png" alt="image10" class="object-contain mx-auto" />
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center w-full">
             <img src="./31.png" alt="image10" class="object-contain mx-auto" />
           </div>
-          />
+          
         </div>
+
       </div>
 
       <!-- SUBSCRIBE SECTION -->
@@ -598,14 +523,14 @@
         </div>
 
         <div
-          class="relative z-10 max-w-2xl mx-auto w-full space-y-6 sm:space-y-8"
+          class="relative z-10 max-w-2xl mx-auto w-full space-y-2 sm:space-y-8"
         >
           <h2
             class="text-lg sm:text-2xl md:text-3xl font-bold text-slate-800 leading-snug px-2"
           >
-            Subscribe to get information, latest news and other interesting
-            offers about Jadoo
-          </h2>
+            Subscribe to get information,</h2>
+             <h2 class="text-lg sm:text-2xl md:text-3xl font-bold text-slate-800 leading-snug px-2">latest news and other interesting</h2>
+            <h2 class="text-lg sm:text-2xl md:text-3xl font-bold text-slate-800 leading-snug px-2">offers about Jadoo</h2>
           <form
             class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-lg mx-auto w-full"
           >
@@ -636,96 +561,8 @@
         </div>
       </div>
 
-      <!-- FOOTER SECTION -->
-      <!-- <footer
-        class="grid grid-cols-2 md:grid-cols-3 gap-8 pt-10 border-t border-gray-100 text-sm"
-      >
-        <div
-          class="col-span-2 md:col-span-1 space-y-3 text-center sm:text-left"
-        >
-          <h1 class="font-bold text-3xl text-[#181E4B]">Jadoo.</h1>
-          <p class="text-xs text-[#080809] opacity-70 max-w-xs mx-auto sm:mx-0">
-            Book your trip in minute, get full Control for much longer.
-          </p>
-        </div>
-
-        <div class="text-center sm:text-left">
-          <h2 class="font-bold text-[#080809] text-base pb-2 sm:pb-4">
-            Company
-          </h2>
-          <div class="flex flex-col space-y-2 text-gray-500">
-            <a href="#" class="hover:text-black transition">About</a>
-            <a href="#" class="hover:text-black transition">Careers</a>
-            <a href="#" class="hover:text-black transition">Mobile</a>
-          </div>
-        </div>
-
-        <div class="text-center sm:text-left">
-          <h2 class="font-bold text-[#080809] text-base pb-2 sm:pb-4">
-            Contact
-          </h2>
-          <div class="flex flex-col space-y-2 text-gray-500">
-            <a href="#" class="hover:text-black transition">Help/FAQ</a>
-            <a href="#" class="hover:text-black transition">Press</a>
-            <a href="#" class="hover:text-black transition">Affiliates</a>
-          </div>
-        </div>
-
-        <div class="text-center sm:text-left">
-          <h2 class="font-bold text-[#080809] text-base pb-2 sm:pb-4">More</h2>
-          <div class="flex flex-col space-y-2 text-gray-500">
-            <a href="#" class="hover:text-black transition">Airlinefees</a>
-            <a href="#" class="hover:text-black transition">Airlines</a>
-            <a href="#" class="hover:text-black transition">Low fare tips</a>
-          </div>
-        </div>
-
-        <div
-          class="col-span-2 md:col-span-1 flex flex-col items-center md:items-start space-y-3 pt-4 md:pt-0"
-        >
-          <div class="flex space-x-3 items-center">
-            <img
-              src="./Social.png"
-              alt="social"
-              class="w-10 h-10 object-contain cursor-pointer"
-            />
-            <div
-              class="flex items-center justify-center"
-            >
-            <img
-                src="./instag.png"
-                alt="Inside Icon"
-                class="w-10 h-10 object-contain
-              />
-            </div>
-            <div>
-            <img
-              src="./bird.png"
-              alt="social"
-              class="w-10 h-10 object-contain cursor-pointer"
-            />
-          </div>
-          <div class="font-semibold text-[#080809] text-base">
-            Discover our app
-          </div>
-          <div class="flex space-x-2">
-            <img
-              src="./googleplay.png"
-              alt="googleplay"
-              class="w-20 h-8 object-contain cursor-pointer"
-            />
-            <img
-              src="./playstore.png"
-              alt="appstore"
-              class="w-20 h-8 object-contain cursor-pointer"
-            />
-          </div>
-          </div>
-        
-       
-      </footer> -->
       <footer
-        class="grid grid-cols-2 md:grid-cols-5 gap-8 pt-10 border-t border-gray-100 text-sm"
+        class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 gap-8 pt-10 border-t border-gray-100 text-sm lg:grid-cols-5"
       >
         <div
           class="col-span-2 md:col-span-1 space-y-3 text-center sm:text-left"
@@ -737,7 +574,7 @@
           </p>
         </div>
 
-        <div class="text-center sm:text-left">
+        <div class="text-center sm:text-left sm:grid-cols-1">
           <h2 class="font-bold text-[#080809] text-base pb-2 sm:pb-4">
             Company
           </h2>
@@ -817,9 +654,28 @@
           </div>
         </div>
       </footer>
+      
+
       <div class="flex justify-center pt-20">
         <p>All rights reserved@jadoo.co</p>
       </div>
     </section>
+    <script>
+  const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const icon = document.getElementById("icon");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        if (mobileMenu.classList.contains("hidden")) {
+          icon.textContent = "☰";
+        } else {
+          icon.textContent = "✕";
+        }
+      });
+</script>
+
   </body>
 </html>

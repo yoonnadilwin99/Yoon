@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-purple-400 min-h-screen flex items-center justify-center px-4 py-6">
+      <div class="w-full max-w-md rounded-2xl bg-white shadow-lg mx-auto flex flex-col space-y-8 px-2 py-6 items-center justify-center">
+        <div class="flex justify-center items-center w-full">
+          <img
+            src="./user.png"
+            alt="profile"
+            class="w-12 h-12 border rounded-lg p-2"
+          />
+        </div>
+        <div>
+          <h1 class="font-bold text-2xl text-center">Create Account</h1>
+          <p class="text-slate-500 text-center text-sm sm:text-base">
+            Join us today! It only takes a minute.
+          </p>
+        </div>
+        <form class="space-y-4 w-full">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="flex flex-col gap-1">
+              <label class="font-bold text-sm">Full Name</label>
+              <input
+                type="text"
+                placeholder="John Doe"
+                class="border rounded-lg px-3 py-2 text-sm"
+                id="nameInput"
+              />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-bold text-sm">Email Address</label>
+              <input
+                type="email"
+                placeholder="name@company.com"
+                class="border rounded-lg px-3 py-2 text-sm"
+                id="emailInput"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-bold text-sm">Password</label>
+            <input type="password" placeholder="........" class="border rounded-lg px-3 py-2 text-sm" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="font-bold text-sm">Confirm Password</label>
+            <input type="password" placeholder="........" class="border rounded-lg px-3 py-2 text-sm" />
+          </div>
+            <div class="flex gap-3 text-sm sm:flex-row sm:items-center sm:flex-wrap">
+            <label class="flex items-start gap-2 sm:items-center">
+              <input type="checkbox" id="checkBox" class="h-4 w-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500" />
+              <span class="text-xs">I agree to the</span>
+            </label>
+            <div class="flex items-center text-xs">
+              <a href="#" class="underline text-purple-600">Terms of Service</a>
+              <span class="text-purple-600">and</span>
+              <a href="#" class="underline text-purple-600">Privacy Policy</a>
+            </div>
+            </div> 
+            <!-- <div >
+              <input type="chexkbox"/>
+              <label class="text-sm">I agree to the <a href="#" class="underline text-purple-600">Terms of Service</a><p>and</p><a href="#" class="underline text-purple-600">Privacy Policy</a></label>
+            </div>  -->
+          
+          <div>
+            <button class="bg-purple-500 text-white font-bold w-full rounded-lg py-3 text-sm sm:py-3">
+              Create My Account
+            </button>
+          </div>
+        </form>
+        <div class="flex items-center gap-2 pb-4 sm:flex-row sm:justify-center text-xs">
+          <p>Already have an account?</p>
+          <a href="#" class="text-purple-600">Sign in here</a>
+        </div>
+      </div>
+    
+  </body>
+</html>
