@@ -10,7 +10,7 @@
       <div class="w-full max-w-md rounded-2xl bg-white shadow-lg mx-auto flex flex-col space-y-8 px-2 py-6 items-center justify-center">
         <div class="flex justify-center items-center w-full">
           <img
-            src="./user.png"
+            src="images/user.png"
             alt="profile"
             class="w-12 h-12 border rounded-lg p-2"
           />
@@ -28,7 +28,7 @@
               <input
                 type="text"
                 placeholder="John Doe"
-                class="border rounded-lg px-3 py-2 text-sm"
+                 required class="border rounded-lg px-3 py-2 text-sm"
                 id="nameInput"
               />
             </div>
@@ -37,18 +37,18 @@
               <input
                 type="email"
                 placeholder="name@company.com"
-                class="border rounded-lg px-3 py-2 text-sm"
+                 required class="border rounded-lg px-3 py-2 text-sm"
                 id="emailInput"
-              />
+              />        
             </div>
           </div>
           <div class="flex flex-col gap-1">
             <label class="font-bold text-sm">Password</label>
-            <input type="password" placeholder="........" class="border rounded-lg px-3 py-2 text-sm" />
+            <input type="password" placeholder="........" required minlength="8" class="border rounded-lg px-3 py-2 text-sm" />
           </div>
           <div class="flex flex-col gap-1">
             <label class="font-bold text-sm">Confirm Password</label>
-            <input type="password" placeholder="........" class="border rounded-lg px-3 py-2 text-sm" />
+            <input type="password" placeholder="........" required class="border rounded-lg px-3 py-2 text-sm" />
           </div>
             <div class="flex gap-3 text-sm sm:flex-row sm:items-center sm:flex-wrap">
             <label class="flex items-start gap-2 sm:items-center">

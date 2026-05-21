@@ -13,7 +13,7 @@
       >
         <div class="flex justify-center mt-10 items-center w-full">
           <img
-            src="./lock.png"
+            src="images/lock.png"
             alt="profile"
             class="w-10 h-10 border rounded-lg p-2 "
           />
@@ -31,18 +31,18 @@
               <input
                 type="email"
                 placeholder="name@company.com"
-                class="border rounded-lg px-3 py-2"
+                required class="border rounded-lg px-3 py-2"
                 id="emailInput"
               />
             </div>
           </div>
           <div class="flex flex-col px-5">
             <label class="font-bold">Password</label>
-            <input type="password" placeholder="........" class="bg-slate-300 rounded-lg px-3 py-2">
+            <input type="password" placeholder="........" required minlength="8" class="bg-slate-300 rounded-lg px-3 py-2">
           </div>
           <div class= "grid grid-cols-2 px-5 justify-between">
             <div class="flex gap-2">
-                <input type="checkbox" class="" id="checkBox"/>
+                <input type="checkbox" required class="" id="checkBox"/>
             <p>Remember me</p>
             </div>
             <div class="text-end">

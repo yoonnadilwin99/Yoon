@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboardassi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen text-slate-800 antialiased font-sans">
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <aside id="fixed sidebar" class=" inset-y-0 left-0 z-40 w-64 bg-blue-950 flex flex-col transform -translate-x-full  transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:transform-none md:block aria-hidden:first-line:">
+            <div class="hidden md:block">
+                <h1 class="text-white text-center pt-3 bg-black font-bold text-lg h-12">📱Mobile Shop</h1>
+            </div>
+            
+            <div class="flex flex-col gap-2 p-4 w-full flex-grow pt-20 md:pt-4">
+                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Management</p>
+                <a href="#" class="text-sm text-slate-300 py-3 hover:bg-blue-900 rounded-lg pl-3 font-medium shadow-sm block">Dashboard</a>
+                <a href="#" class="text-sm text-slate-300 hover:text-white hover:bg-blue-900 p-3 rounded-lg transition">Products</a>
+                <a href="#" class="text-sm text-slate-300 hover:text-white hover:bg-blue-900 p-3 rounded-lg transition">Orders</a>
+                <a href="#" class="text-sm text-slate-300 hover:text-white hover:bg-blue-900 p-3 rounded-lg transition">Users</a>
+            </div>
+            
+            <div class="p-4 border-t border-blue-900 absolute top-0 bottom-6">
+                <button class="w-full py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-medium transition">Logout</button>
+            </div>
+        </aside>
+
+        <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black/50 z-30 md:hidden"></div>
+
+        <main class="flex-1 p-4 md:p-6 space-y-6 overflow-x-hidden">
+            
+            <div class="flex items-center  md:block">
+                <button id="menu-toggle" class="p-2 text-slate-800 hover:bg-slate-200 rounded-lg md:hidden focus:outline-none relative z-50">
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 block">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <h1 class="text-2xl font-bold text-slate-900">Dashboard</h1>
+                
+                <!-- <button id="menu-toggle" class="p-2 text-slate-800 hover:bg-slate-200 rounded-lg md:hidden focus:outline-none relative z-50">
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 block">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button> -->
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white flex p-4 border border-slate-200 rounded-xl items-center gap-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center text-xl">💲</div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-medium">Total Sales</p>
+                        <h2 class="font-bold text-2xl text-slate-800">$0.00</h2>
+                    </div>
+                </div>
+                <div class="bg-white flex p-4 border border-slate-200 rounded-xl items-center gap-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-xl">🛒</div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-medium">Total Orders</p>
+                        <h2 class="font-bold text-2xl text-slate-800">0</h2>
+                    </div>
+                </div>
+                <div class="bg-white flex p-4 border border-slate-200 rounded-xl items-center gap-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center text-xl">👥</div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-medium">Customers</p>
+                        <h2 class="font-bold text-2xl text-slate-800">1</h2>
+                    </div>
+                </div>
+
+                <div class="bg-white flex p-4 border border-slate-200 rounded-xl items-center gap-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center text-xl">⚠️</div>
+                    <div>
+                        <p class="text-sm text-slate-500 font-medium">Low Stock Items</p>
+                        <h2 class="font-bold text-2xl text-slate-800">0</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mx-auto w-full">
+                <div class="w-full overflow-x-auto">
+                    <div>
+                        <div class="flex justify-between items-center p-4 border-b border-slate-100">
+                            <p class="font-bold text-slate-800">Recent Orders</p>
+                            <a href="" class="text-sm font-semibold text-purple-600 hover:text-purple-700">View all &gt;&gt;</a>
+                        </div>
+
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200">
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">ORDER ID</th>
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">CUSTOMERS</th>
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">DATE</th>
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">TOTAL</th>
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase tracking-wider">STATUS</th>
+                                    <th class="p-3 text-xs font-semibold text-slate-600 uppercase text-center w-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mx-auto text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4M16 15l-4 4-4-4" />
+                                        </svg>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function openSidebar() {
+            sidebar.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+
+            requestAnimationFrame(() => {
+                sidebar.classList.remove('-translate-x-full');
+            });
+
+            hamburgerIcon.classList.add('hidden');
+            hamburgerIcon.classList.remove('block');
+            closeIcon.classList.remove('hidden');
+            closeIcon.classList.add('block');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            hamburgerIcon.classList.remove('hidden');
+            hamburgerIcon.classList.add('block');
+            closeIcon.classList.add('hidden');
+            closeIcon.classList.remove('block');
+
+            sidebar.addEventListener('transitionend', function hideAfterTransition() {
+                sidebar.classList.add('hidden');
+                sidebar.removeEventListener('transitionend', hideAfterTransition);
+            });
+        }
+
+        function toggleSidebar() {
+            if (sidebar.classList.contains('hidden')) {
+                openSidebar();
+            } else {
+                closeSidebar();
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', closeSidebar);
+    </script>
+</body>
+
+</html>
