@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>quitemind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-200 min-h-screen font-sans overflow-x-hidden">
+  <header class="md:hidden flex items-center justify-between bg-white p-4 sticky top-0 z-40 shadow-md">
+    <button id="menuBtn" class="text-2xl text-black focus:outline-none p-1 order-first">
+      <span id="icon">☰</span>
+    </button>
+    <h1 class="font-bold text-lg text-black flex-1 pl-4">Dashboard</h1>
+  </header>
+  <!--Mobile Menu -->
+  <div id="menuBackdrop"
+    class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300 md:hidden">
+  </div>
+
+  <!--Side Drawer -->
+  <div id="mobilemenu"
+    class="fixed top-0 left-0 h-screen w-56 bg-blue-950 text-white z-50 flex flex-col p-6 shadow-2xl -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <!--inside Mobile Menu -->
+    <div class="flex justify-between pb-6 border-b border-slate-800 mb-6">
+        <div class="flex justify-center">
+            <img src="images/nature.png" alt="" class="w-6 h-6 border-2 rounded-lg bg-green-300">
+        </div>
+        <div class="flex flex-col">
+            <h1 class="font-bold text-green-800 ">QuiteMind</h1>
+        </div>
+      <button id="closeBtn" class="text-2xl text-slate-400 hover:text-white focus:outline-none"> ✕</button>
+    </div>
+
+    
+    <div class="flex-1 flex gap-2 font-bold text-white">
+      <span>+</span>
+      <p>New Note</p>
+    </div>
+    <p>LIBRARY</p>
+    <div class="flex">
+      <p class="text-green-600">Notes</p>
+    </div>
+  </div>
+
+  <!--Main-->
+  <div class="flex min-h-screen">
+    <!-- Sidebar-->
+    <aside class="hidden md:flex flex-col w-60 bg-blue-950 text-white sticky top-0 h-screen shrink-0 shadow-xl">
+      <div class="h-16 flex  items-center pl-6 bg-black border-b border-slate-800">
+        <h1 class="font-bold text-lg">📱Mobile Shop</h1>
+      </div>
+      <div class="flex-1 flex flex-col gap-2 p-4">
+        <p class="text-xs font-bold text-slate-400 tracking-wider mb-2">
+          MANAGEMENT
+        </p>
+        <a href="#" class="text-sm text-slate-300 hover:bg-pink-600 py-2.5 px-3 rounded-lg font-medium">Dashboard</a>
+        <a href="#" class="text-sm text-slate-300 hover:bg-pink-600 py-2.5 px-3 rounded-lg transition">Products</a>
+        <a href="#" class="text-sm text-slate-300 hover:bg-pink-600 py-2.5 px-3 rounded-lg transition">Orders</a>
+        <a href="#" class="text-sm text-slate-300 hover:bg-pink-600 py-2.5 px-3 rounded-lg transition">Users</a>
+      </div>
+      <div class="p-4 border-t border-slate-800">
+        <button class="w-full py-2.5 rounded-lg bg-slate-600 hover:bg-slate-700 transition text-sm font-medium">
+          Logout
+        </button>
+      </div>
+    </aside>
+    <!-- Main Dashboard -->
+    <main class="flex-1 flex flex-col min-w-0 bg-slate-100 pb-12">
+
+      </button>
+      <div class="hidden md:block bg-white border-b border-slate-200 py-4 px-6 shadow-sm">
+        <h1 class="text-xl font-bold text-slate-800">Dashboard</h1>
+      </div>
+      <!-- Responsive-->
+      <div class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="p-5 flex items-center space-x-4 rounded-xl bg-white shadow-sm border hover:scale-110 border-slate-100">
+          <div class="text-2xl p-3 bg-green-100 text-green-900 rounded-xl">
+            💲
+          </div>
+          <div>
+            <p class="text-sm text-slate-500 font-medium">Total Sales</p>
+            <h2 class="text-xl font-bold text-slate-800">$0.00</h2>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="p-5 flex items-center space-x-4 rounded-xl bg-white shadow-sm border hover:scale-110 border-slate-100">
+          <div class="text-2xl p-3 bg-indigo-100 text-indigo-700 rounded-xl">
+            🛒
+          </div>
+          <div>
+            <p class="text-sm text-slate-500 font-medium">Total Orders</p>
+            <h2 class="text-xl font-bold text-slate-800">0</h2>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="p-5 flex items-center space-x-4 rounded-xl bg-white shadow-sm border hover:scale-110 border-slate-100">
+          <div class="text-2xl p-3 bg-yellow-500 text-yellow-700 rounded-xl">
+            👥
+          </div>
+          <div>
+            <p class="text-sm text-slate-500 font-medium">Customers</p>
+            <h2 class="text-xl font-bold text-slate-800">1</h2>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="p-5 flex items-center space-x-4 rounded-xl bg-white shadow-sm border hover:scale-110 border-slate-100">
+          <div class="text-2xl p-3 bg-blue-300 text-red-700 rounded-xl">
+            ⚠️
+          </div>
+          <div>
+            <p class="text-sm text-slate-500 font-medium">Low Stock Items</p>
+            <h2 class="text-xl font-bold text-slate-800">0</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table-->
+      <div class="px-6">
+        <div
+          class="bg-white flex flex-row justify-between items-center py-3 px-4 shadow-sm border border-slate-100 rounded-xl">
+          <h2 class="text-slate-800 font-bold text-base">Recent Orders</h2>
+          <a href="#" class="text-purple-600 hover:text-purple-800 font-semibold text-sm transition">View all
+            &gt;&gt;</a>
+        </div>
+      <div class="w-full bg-white rounded-xl shadow-sm border border-slate-100 overflow-x-auto">
+          <div class="min-w-[600px] p-2">
+            <table class="w-full table-fixed text-left">
+              <thead>
+                <tr class="border-slate-100 pt-2">
+                  <th class="w-1/6 pb-2 text-xs font-bold text-slate-500 tracking-wider pl-2">
+                    ORDER ID
+                  </th>
+                  <th class="w-1/6 pb-2 text-xs font-bold text-slate-500 tracking-wider">
+                    CUSTOMER
+                  </th>
+                  <th class="w-1/6 pb-2 text-xs font-bold text-slate-500 tracking-wider">
+                    DATE
+                  </th>
+                  <th class="w-1/6 pb-2 text-xs font-bold text-slate-500 tracking-wider">
+                    TOTAL
+                  </th>
+                  <th class="w-1/6 pb-2 text-xs font-bold text-slate-500 tracking-wider">
+                    STATUS
+                  </th>
+                  <th class="w-1/6 pb-2 text-right pr-2">
+                    <div class="inline-flex items-center p-2 justify-end w-full text-slate-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4M16 15l-4 4-4-4" />
+                      </svg>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const mobileMenu = document.getElementById("mobilemenu");
+    const menuBackdrop = document.getElementById("menuBackdrop");
+
+    function openMenu() {
+      menuBackdrop.classList.remove("hidden");
+      setTimeout(() => {
+        menuBackdrop.classList.remove("opacity-0");
+      }, 10);
+
+      mobileMenu.classList.remove("-translate-x-full");
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add("-translate-x-full");
+      menuBackdrop.classList.add("opacity-0");
+      setTimeout(() => {
+        menuBackdrop.classList.add("hidden");
+      }, 300);
+
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    menuBtn.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    menuBackdrop.addEventListener("click", closeMenu);
+  </script>
+</body>
+
+</html>
